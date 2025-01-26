@@ -1,0 +1,128 @@
+.product {
+  position: relative;
+  z-index: 999;
+  display: flex;
+  max-width: 76.8rem;
+  padding: 1.6rem;
+  column-gap: 2rem;
+  @include tablet-width-XL {
+    max-width: 688px;
+  }
+  @include tablet-width-l {
+    max-width: 620px;
+  }
+
+  @include tablet-width-s {
+    max-width: 342px;
+  }
+
+  &__left {
+    width: 31rem;
+    height: 31rem;
+    @include tablet-width-l {
+      width: 21rem;
+      height: 21rem;
+    }
+    @include tablet-width-s {
+      display: none;
+    }
+
+    div {
+      border-radius: 4rem;
+      overflow: hidden;
+      img {
+        width: 31rem;
+        height: 31rem;
+        object-fit: cover;
+        @include tablet-width-l {
+          width: 21rem;
+          height: 21rem;
+        }
+      }
+    }
+  }
+  &__right {
+    .article__title {
+      margin-bottom: 1.2rem;
+    }
+    .article__description,
+    .menu__controllers,
+    .article__price,
+    .article__attention {
+      margin-bottom: 2rem;
+    }
+    .article__specifications {
+      padding-bottom: 0.8rem;
+    }
+    .menu__controllers {
+      width: 100%;
+      @include tablet-width-XL {
+        flex-wrap: wrap;
+        row-gap: 8px;
+        column-gap: 0.8rem;
+      }
+
+      span {
+        text-transform: capitalize;
+      }
+    }
+    .article__price {
+      display: flex;
+      justify-content: space-between;
+    }
+    .article__hr {
+      height: 0.1rem;
+      background-color: $color-border-light;
+    }
+    .article__attention {
+      padding: 1.2rem 0;
+      display: flex;
+      column-gap: 0.8rem;
+      @include tablet-width-XL {
+        @include font(1rem, 1.4rem, 600);
+      }
+      div {
+        display: block;
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+    }
+    .product__button {
+      @include font(1.6rem, 2.4rem, 600);
+      display: block;
+      width: 100%;
+      padding: 1rem 0;
+      text-align: center;
+      @include border(0.1rem, $color-border-dark, 10rem);
+      @media (hover: hover) {
+        &:hover {
+          background-color: $color-bgc-container;
+          color: $color-txt-light;
+        }
+      }
+    }
+  }
+}
+.button__secondary.product__controller {
+  @media (hover: hover) {
+    &:hover {
+      background-color: $color-bgc-container;
+      color: $color-txt-light;
+      border-color: $color-border-dark;
+      span {
+        background-color: $color-bgc-body;
+        color: $color-txt-dark;
+      }
+    }
+  }
+}
+
+.product__controller.active {
+  background-color: $color-bgc-container;
+  color: $color-txt-light;
+  border-color: $color-border-dark;
+  span {
+    background-color: $color-bgc-body;
+    color: $color-txt-dark;
+  }
+}

@@ -1,0 +1,39 @@
+.burger {
+  width: 44px;
+  height: 44px;
+  display: none;
+  margin-top: -0.8rem;
+  position: relative;
+  span {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 1.6rem;
+    height: 1.5px;
+    background-color: $color-txt-dark;
+    transition: all 2s;
+  }
+  span:last-child {
+    top: 65%;
+  }
+
+  @include border(0.1rem, $color-border-dark, 50%);
+  @include tablet-width {
+    display: block;
+  }
+}
+
+.burger.active {
+  span {
+    left: 32%;
+    top: 50%;
+  }
+  span:first-child {
+    transform: rotate(45deg);
+  }
+  span:last-child {
+    transform: rotate(-45deg);
+  }
+}
