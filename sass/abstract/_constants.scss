@@ -1,0 +1,36 @@
+//TEXT
+$color-txt-dark: #403f3d;
+$color-txt-light: #e1d4c9;
+$color-txt-accent: #b0907a;
+
+//BACKGROUND
+$color-bgc-body: #e1d4c9;
+$color-bgc-container: #665f55;
+$color-bgc-backdrop: #403f3dcc;
+
+//BORDER
+$color-border-light: #c1b6ad;
+$color-border-dark: #665f55;
+
+//FILTER COLOR
+$filttredColor-txt-dark: invert(25%) sepia(1%) saturate(2093%) hue-rotate(1deg)
+  brightness(0%) contrast(90%);
+$filttredColor-txt-light: invert(98%) sepia(4%) saturate(1694%)
+  hue-rotate(310deg) brightness(91%) contrast(92%);
+$filttredColor-txt-accent: invert(61%) sepia(4%) saturate(2661%)
+  hue-rotate(342deg) brightness(97%) contrast(85%);
+
+//RADIUS
+$small-radius: 4rem;
+$medium-radius: 10rem;
+
+//Media-width
+$decstop-width: 1400px;
+$decstop-width-l: 1240px;
+
+$tablet-width-XL: 968px;
+$tablet-width: 768px;
+$tablet-width-l: 740px;
+$tablet-width-s: 650px;
+
+$mobile-width-XL: 530px;

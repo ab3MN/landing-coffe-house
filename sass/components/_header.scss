@@ -1,0 +1,112 @@
+//main components styles
+.header__button,
+.nav__link {
+  @include font(1.6rem, 2.4rem, 600);
+  color: $color-txt-dark;
+  position: relative;
+  &::after {
+    @include linksLine($color-txt-dark);
+  }
+  @include tablet-width {
+    @include font(3.2rem, 4rem, 600);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      &::after {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+.header__button.menu__page {
+  cursor: default;
+  > img {
+    cursor: default;
+  }
+  &::after {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.link.home__page {
+  cursor: default;
+  > img {
+    cursor: default;
+  }
+}
+
+//other styles
+.header {
+  max-width: 1360px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 2em 0 1.5rem;
+  align-items: center;
+  position: relative;
+  &__button {
+    display: flex;
+    column-gap: 0.8rem;
+    margin-top: -1rem;
+    @include tablet-width {
+      column-gap: 1.8rem;
+    }
+
+    > object {
+      width: 2rem;
+      height: 2rem;
+      @include tablet-width {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+    &__button.active {
+      @include tablet-width {
+        display: none;
+      }
+    }
+  }
+  > .logo {
+    margin-top: 0.6rem;
+  }
+}
+
+.nav {
+  width: 894px;
+  margin-left: 30px;
+  display: flex;
+  justify-content: space-between;
+  row-gap: 11rem;
+
+  @include tablet-width {
+    width: 100vw;
+    position: fixed;
+    right: -100%;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    height: calc(100vh - 9rem);
+    z-index: 102;
+    background-color: $color-bgc-body;
+    align-items: center;
+    transition: all 2s;
+    top: 10rem;
+  }
+  &__list {
+    display: flex;
+    column-gap: 4rem;
+    margin-top: -1rem;
+    @include tablet-width {
+      padding-top: 7rem;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 6rem;
+    }
+  }
+}
+.nav.active {
+  right: 0;
+}

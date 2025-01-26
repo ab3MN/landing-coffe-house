@@ -1,0 +1,223 @@
+html {
+  font-size: 10px;
+  font-style: normal;
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+  @extend %font-inter;
+  color: $color-txt-dark;
+}
+body {
+  max-width: 1440px;
+  padding: 0 2rem;
+  margin: auto;
+  background-color: $color-bgc-body;
+  @include tablet-width {
+    padding: 0 4rem;
+  }
+  @include mobile-width-XL {
+    padding: 0 1.6rem;
+  }
+}
+.section {
+  margin-bottom: 10rem;
+}
+.wrapper {
+  max-width: 1360px;
+  margin: auto;
+}
+//TITLES
+.section__title {
+  @include font(6rem, 7.5rem, 600);
+  text-align: center;
+  padding-bottom: 4rem;
+  @include tablet-width-l {
+    @include font(3.2rem, 4rem, 600);
+  }
+  > span {
+    font-family: 'Inter-Italic';
+    color: $color-txt-accent;
+  }
+}
+.article__title {
+  @include font(2.4rem, 3rem, 600);
+}
+.article__description,
+.article__specifications {
+  @include font(1.6rem, 2.4rem);
+}
+.article__price {
+  @include font(2.4rem, 3rem, 600);
+  align-self: flex-start;
+}
+
+//BUTTONS
+.primary__button {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  width: 20rem;
+  height: 6.4rem;
+  @include font(1.6rem, 2.4rem, 600);
+  color: $color-txt-dark;
+  background-color: $color-txt-light;
+  border-radius: 10rem;
+  position: relative;
+  > span,
+  > object {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  > span {
+    left: 50%;
+    transition: 1s;
+    @include tablet-width {
+      left: 43%;
+    }
+  }
+  > object {
+    left: 63%;
+    opacity: 0;
+    @include tablet-width {
+      opacity: 1;
+    }
+  }
+  @media (hover: hover) {
+    &:hover {
+      > span {
+        left: 43%;
+      }
+      > object {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+//LINKS
+.icon__button {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px;
+  border-radius: 50%;
+}
+.icon__button.dark {
+  @include border(0.1rem, $color-border-dark);
+  > object {
+    filter: $filttredColor-txt-dark;
+  }
+  @media (hover: hover) {
+    &:hover {
+      background-color: $color-border-dark;
+      > object {
+        filter: $filttredColor-txt-light;
+      }
+    }
+  }
+}
+.icon__button.light {
+  @include border(0.1rem, $color-border-light);
+  @media (hover: hover) {
+    &:hover {
+      background-color: $color-border-light;
+      > object {
+        filter: $filttredColor-txt-dark;
+      }
+    }
+  }
+}
+.icon__button.refresh {
+  @include border(0.1rem, $color-border-dark);
+  margin: auto;
+  display: none;
+  @include tablet-width-XL {
+    display: flex;
+  }
+}
+.app__link {
+  display: block;
+  padding: 1.3rem 1.75rem;
+  @include border(0.1rem, $color-border-dark, 10rem);
+  display: flex;
+  column-gap: 0.9rem;
+  width: 20rem;
+  height: 6.4rem;
+  color: $color-txt-dark;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    > .button__description,
+    > .button__name {
+      text-align: left;
+    }
+    > .button__description {
+      @include font(1rem, 1.4rem);
+    }
+    > .button__name {
+      @include font(1.6rem, 2.4rem);
+    }
+  }
+  @media (hover: hover) {
+    &:hover {
+      background-color: $color-border-dark;
+      color: $color-txt-light;
+      > object {
+        filter: $filttredColor-txt-light;
+      }
+    }
+  }
+}
+
+.button__secondary {
+  @include border(0.1rem, $color-border-light, 10rem);
+  @include font(1.6rem, 2.4rem, 600);
+  color: $color-txt-dark;
+  padding: 0.8rem 1.6rem 0.8rem 0.8rem;
+  display: flex;
+  column-gap: 0.8rem;
+  align-items: center;
+  transition: all 1s;
+
+  > span {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: $color-border-light;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    > object {
+      transition: all 1s;
+      width: 1.6rem;
+      height: 2.4rem;
+    }
+  }
+
+  &:disabled {
+    background-color: $color-bgc-container;
+    color: $color-txt-light;
+    border-color: $color-border-dark;
+    > div {
+      background-color: $color-bgc-body;
+    }
+  }
+  @media (hover: hover) {
+    &:hover {
+      background-color: $color-bgc-container;
+      color: $color-txt-light;
+      border-color: $color-border-dark;
+      > div {
+        background-color: $color-bgc-body;
+      }
+    }
+  }
+  &:disabled {
+    cursor: default;
+  }
+}

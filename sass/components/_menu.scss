@@ -1,0 +1,107 @@
+.menu {
+  /* ==================== CONTROLLERS ==================== */
+
+  .section__title {
+    @include tablet-width-XL {
+      padding-bottom: 3.9rem;
+      br {
+        display: none;
+      }
+    }
+  }
+  &__controllers {
+    width: 361px;
+    column-gap: 1.6rem;
+    margin: auto;
+    display: flex;
+    margin-bottom: 3.8rem;
+    @include tablet-width-s {
+      width: 34.5rem;
+      column-gap: 0.8rem;
+    }
+  }
+
+  /* ==================== LIST ==================== */
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    align-items: stretch;
+
+    @include tablet-width-XL {
+      margin-bottom: 40px;
+
+      justify-content: center;
+      :nth-child(n + 5) {
+        display: none;
+      }
+    }
+  }
+  &__item {
+    position: relative;
+    width: calc(25% - 3rem);
+    padding-bottom: 2rem;
+    overflow: hidden;
+    border: 0.1rem solid $color-border-light;
+    border-radius: 4rem;
+    opacity: 0;
+    animation: ani 2.5s forwards;
+    cursor: pointer;
+    @include tablet-width-XL {
+      width: 45%;
+      height: 100%;
+    }
+    @include tablet-width {
+      height: 50.6rem;
+    }
+    @include tablet-width-s {
+      width: 31rem;
+    }
+    @media (hover: hover) {
+      &:hover {
+        > div:first-child > img {
+          transform: scale(1.02);
+        }
+      }
+    }
+
+    > div:first-child {
+      border-radius: 4rem;
+      overflow: hidden;
+    }
+  }
+  &__img {
+    width: 100%;
+    height: auto;
+    transform: scale(1.1);
+    object-fit: cover;
+  }
+  &__container {
+    height: calc(100% - 29.88rem);
+    padding: 2rem 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 4rem;
+    > .article__price {
+      position: absolute;
+      bottom: 1.8rem;
+      left: 19px;
+    }
+  }
+  &__content {
+    > .article__title {
+      padding-bottom: 12px;
+    }
+  }
+}
+@keyframes ani {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

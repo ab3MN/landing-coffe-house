@@ -1,0 +1,171 @@
+.slider {
+  display: flex;
+  column-gap: 4rem;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 4rem;
+  &__wrapper {
+    max-width: 480px;
+    overflow: hidden;
+    @include tablet-width-l {
+      margin: auto;
+    }
+    @include tablet-width-s {
+      max-width: 348px;
+    }
+  }
+  &__items {
+    display: flex;
+    position: relative;
+    left: -480px;
+    @include tablet-width-s {
+      left: -348px;
+    }
+  }
+  &__img--box {
+    margin-bottom: 2rem;
+    @include mobile-width-XL {
+      margin-bottom: 1.7em;
+    }
+  }
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+  li {
+    max-width: 480px;
+    flex: 0 0 100%;
+    @include tablet-width-s {
+      max-width: 348px;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .article__title,
+    .article__description {
+      padding-bottom: 1.6rem;
+    }
+    .article__description {
+      text-align: center;
+    }
+    .article__price {
+      align-self: auto;
+    }
+  }
+  &__controllers {
+    display: flex;
+    column-gap: 1.2rem;
+    width: 144px;
+    margin: auto;
+    span {
+      display: block;
+      width: 4rem;
+      height: 0.4rem;
+      border-radius: 10rem;
+      background-color: $color-border-light;
+      span {
+        position: relative;
+      }
+      .active__controller {
+        animation: active__controller 5s linear;
+        background-color: $color-border-dark;
+      }
+    }
+  }
+  .icon__button {
+    @include tablet-width-l {
+      display: none;
+    }
+  }
+  .icon__button.button__left {
+    margin-left: 0.3rem;
+    object {
+      transform: rotate(180deg);
+    }
+  }
+  .icon__button.button__right {
+    margin-right: 0.3rem;
+  }
+}
+
+@keyframes transition__left {
+  from {
+    left: -480px;
+  }
+  to {
+    left: 0px;
+  }
+}
+@keyframes mobile__transition__left {
+  from {
+    left: -348px;
+  }
+  to {
+    left: 0px;
+  }
+}
+.transition__left {
+  animation: transition__left 2s;
+  @include tablet-width-s {
+    animation: mobile__transition__left 2s;
+  }
+}
+
+@keyframes transition__right {
+  from {
+    left: -480px;
+  }
+  @include tablet-width-s {
+    left: -348px;
+  }
+  to {
+    left: -960px;
+    @include tablet-width-s {
+      left: -696px;
+    }
+  }
+}
+@keyframes mobile__transition__right {
+  from {
+    left: -348px;
+  }
+  to {
+    left: -696px;
+  }
+}
+.transition__right {
+  animation: transition__right 2s;
+  @include tablet-width-s {
+    animation: mobile__transition__right 2s;
+  }
+}
+
+@keyframes active__controller {
+  0% {
+    width: 0%;
+  }
+  16% {
+    width: 16%;
+  }
+  33% {
+    width: 33%;
+  }
+  50% {
+    width: 50%;
+  }
+  66% {
+    width: 66%;
+  }
+  83% {
+    width: 83%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.slider__controllers span span.paused {
+  animation-play-state: paused;
+}

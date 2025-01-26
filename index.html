@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="./img/general/favicon.png">
+  <title>Coffee House</title>
+  <link type="text/css" rel="stylesheet" href="./sass/style.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <h1>
+      <a href="#" onClick="return false;" class="link home__page">
+        <img src="./img/general/logo.png" alt="logo">
+      </a>
+    </h1>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link" href='#favorite'> Favorite coffee </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href='#about'> About </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href='#mobile'> Mobile app</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#contacts">Contact us</a>
+        </li>
+      </ul>
+      <a class="header__button home__page" data-menu="header__button" href="./menu.html">
+        Menu
+        <object data="./img/general/icons/coffee-cup.svg"></object>
+      </a>
+    </nav>
+
+    <button class="burger" id="burger">
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <!-- ENJOY -->
+    <section class="section enjoy">
+      <div class="wrapper">
+        <video playsinline autoplay muted loop poster="./img/main/hero/bgc__hero.jpg" class="enjoy__video">
+          <source src="./videos/house.mp4" type="video/mp4">
+        </video>
+        <div class="enjoy__hero">
+          <h2 class="section__title">
+            <span>Enjoy</span> premium coffee at our charming cafe
+          </h2>
+          <h4 class="article__description">
+            With its inviting atmosphere and delicious coffee options, the
+            Coffee House Resource is a popular destination for coffee lovers
+            and those seeking a warm and inviting space to enjoy their
+            favorite beverage.
+          </h4>
+          <a class="primary__button" href="./menu.html">
+            <span> Menu </span>
+            <object data="./img/general/icons/coffee-cup.svg"></object>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- FAVORITE -->
+    <section class="section favorite" id="favorite">
+      <div class="wrapper">
+        <h2 class="section__title">
+          Choose your <span>favorite</span> coffee
+        </h2>
+        <div class="slider">
+          <button class="icon__button dark button__left" id="button__left">
+            <object data="./img/general/icons/arrow-right.svg"></object>
+          </button>
+          <div class="slider__wrapper">
+            <ul class="slider__items" id="slider">
+              <li id="item__left">
+                <article class="slider__item" data-active="right">
+
+                  <div class="slider__img--box">
+                    <img src="./img/main/coffee/coffee-slider__3.png" alt="Ice coffee" class="slider__img">
+                  </div>
+                  <h3 class="article__title">Ice coffee</h3>
+                  <h4 class="article__description">
+                    A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.
+                  </h4>
+                  <p class="article__price">$4.50</p>
+
+                </article>
+              </li>
+              <li id="item__active">
+                <article class="slider__item" data-active="left">
+                  <div class="slider__img--box">
+                    <img src="./img/main/coffee/coffee-slider__1.png" alt="S’mores Frappuccino" class="slider__img">
+                  </div>
+                  <h3 class="article__title">S’mores Frappuccino</h3>
+                  <h4 class="article__description">
+                    This new drink takes an espresso and mixes it with brown sugar
+                    and cinnamon before being topped with oat milk.
+                  </h4>
+                  <p class="article__price">$5.50</p>
+                </article>
+              </li>
+              <li id="item__right">
+                <article class="slider__item" data-active="active">
+                  <div class="slider__img--box">
+                    <img src="./img/main/coffee/coffee-slider__2.png" alt="Caramel Macchiato" class="slider__img">
+                  </div>
+                  <h3 class="article__title">Caramel Macchiato</h3>
+                  <h4 class="article__description">
+                    Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick
+                    foam.
+                  </h4>
+                  <p class="article__price">$5.00</p>
+                </article>
+              </li>
+            </ul>
+          </div>
+          <button class="icon__button dark button__right" id="button__right">
+            <object data="./img/general/icons/arrow-right.svg"></object>
+          </button>
+        </div>
+        <div class="slider__controllers">
+          <span class="slider__controller">
+            <span id="left__controller" class="active__controller"></span>
+          </span>
+          <span class="slider__controller">
+            <span id="active__controller"></span>
+          </span>
+          <span class="slider__controller">
+            <span id="right__controller"></span>
+          </span>
+        </div>
+      </div>
+    </section>
+    <!-- ABOUT -->
+    <section class="section about" id="about">
+      <div class="wrapper">
+        <h2 class="section__title">
+          Resource is <span>the perfect and cozy place</span> where you can
+          enjoy a variety of hot beverages, relax, catch up with friends, or
+          get some work done.
+        </h2>
+        <div class="about__gallery">
+          <ul class="gallery__list">
+            <li class="gallery__item">
+              <img src="./img/main/about/about__1.jpg" alt="gallery__img" class="gallery__img">
+            </li>
+            <li class="gallery__item small">
+              <img src="./img/main/about/about__2.jpg" alt="gallery__img " class="gallery__img small">
+            </li>
+          </ul>
+          <ul class="gallery__list">
+            <li class="gallery__item small">
+              <img src="./img/main/about/about__3.jpg" alt="gallery__img" class="gallery__img small">
+            </li>
+
+            <li class="gallery__item">
+              <img src="./img/main/about/about__4.jpg" alt="gallery__img " class="gallery__img">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- MOBILE -->
+    <section class="section mobile" id="mobile">
+      <div class="wrapper">
+        <div class="mobile__left">
+          <h2 class="section__title">
+            <span>Download </span>our apps to start ordering
+          </h2>
+          <h4 class="article__description">
+            Download the Resource app today and experience the comfort of
+            ordering your favorite coffee from wherever you are
+          </h4>
+          <div>
+            <a class="app__link" href="https://www.apple.com/app-store/" target="_blank">
+              <object data="./img/general/icons/apple.svg"></object>
+              <div>
+                <span class="button__description">Available on the</span>
+                <span class="button__name">App Store</span>
+              </div>
+            </a>
+            <a class="app__link" href="https://play.google.com/store/games?hl=ru&gl=US" target="_blank">
+              <object data="./img/general/icons/google.svg"></object>
+              <div>
+                <span class="button__description">Available on</span>
+                <span class="button__name">Google Play</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="mobile__right">
+          <div class="img__box">
+            <img src="./img/main/mobile/mobile.png" alt="mobile" class="mobile__img">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- FOOTER -->
+  <footer class="footer" id="contacts">
+  </footer>
+  <script src="./dist/main.js"></script>
+  <script src="./js/Components/Slider.js"></script>
+</body>
+
+</html>

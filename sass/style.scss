@@ -1,0 +1,23 @@
+//Fonts
+@import './fonts/inter';
+
+//Abstract
+@import './abstract/constants';
+@import './abstract/mixins';
+@import './abstract/placeholders';
+
+//Base
+@import './base/normalize';
+@import './base/base';
+
+//Components
+@import './components/header';
+@import './components/enjoy';
+@import './components/favorite';
+@import './components/about';
+@import './components/mobile';
+@import './components/footer';
+@import './components/menu';
+@import './components/burger';
+@import './components/modal';
+@import './components/product';

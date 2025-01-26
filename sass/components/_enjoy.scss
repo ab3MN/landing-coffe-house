@@ -1,0 +1,44 @@
+.enjoy {
+  > .wrapper {
+    // background-image: url("../../img/main/hero/bgc__hero.jpg");
+    border-radius: 4rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  &__video {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 4rem;
+  }
+  &__hero {
+    position: relative;
+    margin-left: 10rem;
+    padding: 10rem 0;
+    max-width: 53rem;
+    color: $color-txt-light;
+    @include tablet-width-XL {
+      max-width: 100%;
+      margin: auto;
+      padding: 10rem 6rem;
+    }
+    @include mobile-width-XL {
+      padding: 6rem 1.6rem;
+    }
+
+    > .section__title {
+      @include font(7.2rem, 7.56rem, 600);
+      text-align: left;
+      @include tablet-width-l {
+        @include font(4.2rem, 4.83rem, 600);
+      }
+    }
+    > .article__description {
+      padding-bottom: 4rem;
+    }
+  }
+}

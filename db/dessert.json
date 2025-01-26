@@ -1,0 +1,58 @@
+[
+  {
+    "id": "13",
+    "img": "./img/menu/desert/dessert-1.png",
+    "name": "Marble cheesecake",
+    "description": "Philadelphia cheese with lemon zest on a light sponge cake and red currant jam",
+    "price": "3.50"
+  },
+  {
+    "id": "14",
+    "img": "./img/menu/desert/dessert-2.png",
+    "name": "Red velvet",
+    "description": "Layer cake with cream cheese frosting",
+    "price": "4.00"
+  },
+  {
+    "id": "15",
+    "img": "./img/menu/desert/dessert-3.png",
+    "name": "Cheesecakes",
+    "description": "Soft cottage cheese pancakes with sour cream and fresh berries and sprinkled with powdered sugary",
+    "price": "4.50"
+  },
+  {
+    "id": "16",
+    "img": "./img/menu/desert/dessert-4.png",
+    "name": "Creme brulee",
+    "description": "Delicate creamy dessert in a caramel basket with wild berries",
+    "price": "4.00"
+  },
+  {
+    "id": "17",
+    "img": "./img/menu/desert/dessert-5.png",
+    "name": "Pancakes",
+    "description": "Tender pancakes with strawberry jam and fresh strawberries",
+    "price": "4.50"
+  },
+  {
+    "id": "18",
+    "img": "./img/menu/desert/dessert-6.png",
+    "name": "Honey cake",
+    "description": "Classic honey cake with delicate custard",
+    "price": "4.50"
+  },
+  {
+    "id": "19",
+    "img": "./img/menu/desert/dessert-7.png",
+    "name": "Chocolate cake",
+    "description": "Cake with hot chocolate filling and nuts with dried apricots",
+    "price": "5.50"
+  },
+  {
+    "id": "20",
+    "img": "./img/menu/desert/dessert-8.png",
+    "name": "Black forest",
+    "description": "A combination of thin sponge cake with cherry jam and light chocolate mousse",
+    "price": "6.50"
+  }
+]
